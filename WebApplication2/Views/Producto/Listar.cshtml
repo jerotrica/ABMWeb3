@@ -1,0 +1,34 @@
+﻿@using WebApplication2.Entidades
+@model List<Producto>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+<form action="@Url.Content("~/Producto/Eliminar")" method="post">
+    <table class="table table-hover">
+        <thead class="thead-inverse">
+            <tr>
+                <th>#</th>
+                <th>IdProovedor</th>
+                <th>Nombre</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var producto in Model)
+            {
+            <tr>
+                <td><input class="form-check-label" type="checkbox" value="@producto.idProducto" name="id" /></td>
+                <td>@producto.idProveedor</td>
+                <td>@producto.nombre</td>
+                <td><button class="btn btn-outline-danger" type="submit" value="eliminar">Eliminar</button></td>
+                <td><a href="/Producto/Modificar/@producto.idProducto">Modificar</a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</form>

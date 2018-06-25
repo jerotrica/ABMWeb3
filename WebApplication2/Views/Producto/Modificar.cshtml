@@ -1,0 +1,32 @@
+﻿@using WebApplication2.Entidades
+@model  Producto
+@{
+    ViewBag.Title = "Modificar";
+}
+
+<h2>Modificar</h2>
+
+<h2>Modificar</h2>
+
+<form action="@Url.Content("~/Producto/Modificar")" method="post">
+    <table class="table table-hover">
+        <thead class="thead-inverse">
+            <tr>
+                <th>#</th>
+                <th>IdProovedor</th>
+                <th>Nombre</th>
+                <th>Modificar</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+                <tr>
+                    <td><input type="hidden" value="@Model.idProducto" name="idProducto" /></td>
+                    <td><input type="number" name="idProveedor" value="@Model.idProveedor"/> </td>
+                    <td><input type="text" name="nombre" value="@Model.nombre" /></td>
+                    <td><button class="btn btn-outline-danger" type="submit" value="modificar">Modificar</button></td>
+                </tr>
+        </tbody>
+    </table>
+</form>

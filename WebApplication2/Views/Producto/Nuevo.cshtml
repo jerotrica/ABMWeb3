@@ -1,0 +1,18 @@
+﻿@using WebApplication2.Entidades
+@model  Proveedor
+
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>Nuevo</h2>
+
+<form action="@Url.Content("~/Producto/Nuevo")" method="post">
+    <label>Nombre Producto</label>
+    <input type="text" name="nombre" value="" />
+    <label>ID Proveedor</label>
+    <input type="number" name="idProveedor" value="" />
+    <button class="btn btn-success" type="submit">Crear</button>
+</form>
+
